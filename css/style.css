@@ -1,3 +1,4 @@
+/************************** Pour le "design" **********************************/
 aside {
   border: 1px solid black;
 }
@@ -11,16 +12,33 @@ aside {
     text-transform: uppercase;
 }
 
-body{
+body {
     background-color: #f8f8f8;
 }
 
 blockquote{
     background-color: white;
 }
-
-#footer{
+#footer {
     background-color: black;
     color: white;
     margin-top: 30px;
+}
+
+/******************* Pour les ajustements responsives *************************/
+/* Pour que les images s'adaptent à la div qui les contient */
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Sinon les blocs sont collés sur mobile */
+section, aside {
+    margin-bottom: 10px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
