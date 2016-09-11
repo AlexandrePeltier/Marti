@@ -24,11 +24,9 @@ blockquote{
     color: white;
     margin-top: 30px;
 }
-#subtitle{
+#contact{
 	text-align:right;
-	margin-right: auto;
-    width: 60%;
-    margin-left: auto;
+	vertical-align: middle;
 }
 
 /******************* Pour les ajustements responsives *************************/
