@@ -24,6 +24,12 @@ blockquote{
     color: white;
     margin-top: 30px;
 }
+#subtitle{
+	text-align:right;
+	margin-right: auto;
+    width: 60%;
+    margin-left: auto;
+}
 
 /******************* Pour les ajustements responsives *************************/
 /* Pour que les images s'adaptent à la div qui les contient */
@@ -31,6 +37,8 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
+	margin-right: auto;
+    margin-left: auto;
 }
 
 /* Sinon les blocs sont collés sur mobile */
