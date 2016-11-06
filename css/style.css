@@ -1,6 +1,7 @@
 /************************** Pour le "design" **********************************/
 aside {
-  border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.52);
+    border-radius: 10px;
 }
 
 .content-main {
@@ -26,6 +27,7 @@ blockquote{
 }
 #contact{
 	text-align:right;
+	margin-top:10px;
 	vertical-align: middle;
 }
 
@@ -37,6 +39,7 @@ img {
     max-width: 100%;
 	margin-right: auto;
     margin-left: auto;
+	margin-bottom : 5px;
 }
 
 /* Sinon les blocs sont collés sur mobile */
