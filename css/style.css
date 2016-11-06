@@ -1,6 +1,7 @@
 /************************** Pour le "design" **********************************/
 aside {
-  border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.52);
+    border-radius: 10px;
 }
 
 .content-main {
@@ -24,11 +25,10 @@ blockquote{
     color: white;
     margin-top: 30px;
 }
-#subtitle{
+#contact{
 	text-align:right;
-	margin-right: auto;
-    width: 60%;
-    margin-left: auto;
+	margin-top:10px;
+	vertical-align: middle;
 }
 
 /******************* Pour les ajustements responsives *************************/
@@ -39,6 +39,7 @@ img {
     max-width: 100%;
 	margin-right: auto;
     margin-left: auto;
+	margin-bottom : 5px;
 }
 
 /* Sinon les blocs sont collés sur mobile */
