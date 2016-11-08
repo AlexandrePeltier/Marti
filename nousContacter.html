@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Martigné le logis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Include Date Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.fr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <!-- Includes -->
+    <script>
+        //tester serveur TODO
+           $(document).ready(function(){
+               $("nav").load("includes/nav.html");
+
+               var currentDate = new Date();
+               $('.datepicker').each(function() {
+                   $(this).datepicker(
+                       {
+                            autoclose: true,
+                            disableTouchKeyboard: true,
+                            format: "dd/mm/yyyy",
+                            language: 'fr',
+                            startDate: currentDate
+                       });
+                   });
+               });
+
+
+   </script>
+</head>
+<body>
+    <nav id="nav" class="navbar navbar-default">
+
+    </nav>
+
+    <div class="container content-main">
+        <div class="row">
+            <form id="contact" class="col-md-8 col-md-offset-2" method="post" action="contactProcess.php">
+                <div class="form-group row">
+                    <div class="col-xs-8">
+                        <label for="nom">Nom:</label>
+                        <input type="text" class="form-control" required id="nom">
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="prenom">Prénom:</label>
+                        <input type="text" class="form-control" required id="prenom">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-xs-12">
+                        <label for="adresse">Adresse:</label>
+                        <input type="text" class="form-control" required id="adresse">
+                    </div>
+				</div>
+				
+				<div class="form-group row">
+                    <div class="col-xs-4">
+                        <label for="codePostal">Code Postal:</label>
+                        <input type="text" class="form-control" required id="codePostal">
+                    </div>
+                    <div class="col-xs-8">
+                        <label for="ville">Ville:</label>
+                        <input type="text" class="form-control" required id="ville">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-xs-6">
+                        <label for="tel">Téléphone:</label>
+                        <input type="tel" class="form-control"  required id="tel">
+                    </div>
+
+                    <div class="col-xs-6">
+                        <label for="email">Adresse email:</label>
+                        <input type="email" class="form-control" required id="email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-xs-6">
+                        <label for="choix">Vous souhaitez réserver : </label>
+                        <div class="radio">
+                            <label class="radio-inline"><input type="radio" name="choix">La Grande Écurie</label>
+                            <label class="radio-inline"><input type="radio" name="choix">Le Logis</label>
+                            <label class="radio-inline"><input type="radio" name="choix">Les deux</label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <label for="typeEvent">Type d'évènement :</label>
+                        <select class="form-control" name="typeEvent" id="typeEvent">
+                            <option>Mariage</option>
+                            <option>Séminaire</option>
+                            <option>Réception</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-xs-6">
+                        <label for="dateDebut">Du : </label>
+                        <input class="form-control datepicker" type="text" name="dateDebut" id="dateDebut">
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="dateFin">Au : </label>
+                        <input class="form-control datepicker" type="text" name="dateFin" id="dateFin">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea class="form-control" name="message" rows="8" id="message"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-default">Envoyer</button>
+
+            </form>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class=container-fluid>
+            Mentions légales
+        </div>
+    </div>
+</body>
+</html>
