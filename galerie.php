@@ -12,6 +12,7 @@
     <script>
            $(function(){
              $("nav").load("includes/nav.html");
+             $("footer").load("includes/footer.html");
            });
 
    </script>
@@ -118,11 +119,8 @@
        </div>
 
     </div>
-    <div id="footer">
-        <div class=container-fluid>
-            Mentions légales
-        </div>
-    </div>
+    <footer id="footer">
+    </footer>
 </body>
 
 </html>
